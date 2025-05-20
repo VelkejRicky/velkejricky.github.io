@@ -1,86 +1,112 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Landing Page</title>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-  * {
-    margin:0; padding:0; box-sizing: border-box;
-  }
-  body, html {
-    height: 100%;
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #1e3c72, #2a5298);
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-  }
-  .container {
-    background: rgba(255 255 255 / 0.1);
-    backdrop-filter: blur(15px);
-    border-radius: 20px;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.37);
-    max-width: 600px;
-    width: 100%;
-    padding: 50px 40px;
-    text-align: center;
-  }
-  h1 {
-    font-weight: 600;
-    font-size: 2.8rem;
-    margin-bottom: 40px;
-    text-shadow: 0 2px 8px rgba(0,0,0,0.3);
-  }
-  nav {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-  }
-  nav a {
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1.3rem;
-    padding: 18px 0;
-    border-radius: 12px;
-    background: linear-gradient(90deg, #ff6a00, #ee0979);
-    box-shadow: 0 5px 15px rgba(238,9,121,0.6);
-    color: #fff;
-    transition: background 0.4s ease, transform 0.3s ease;
-    user-select: none;
-  }
-  nav a:hover {
-    background: linear-gradient(90deg, #ee0979, #ff6a00);
-    transform: scale(1.05);
-    box-shadow: 0 8px 25px rgba(255, 106, 0, 0.85);
-  }
-  nav a:active {
-    transform: scale(0.95);
-    box-shadow: 0 3px 10px rgba(238,9,121,0.4);
-  }
-  @media (min-width: 600px) {
-    nav {
-      flex-direction: row;
-      justify-content: center;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Landing Page</title>
+  <style>
+    /* Reset a základ */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
-    nav a {
+
+    body, html {
+      height: 100%;
+      background: #f5f5f5;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      width: 100%;
+      padding: 20px;
+      background: #222;
+      color: #fff;
+      text-align: center;
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+
+    main {
       flex: 1;
-      margin: 0 12px;
+      width: 100%;
+      max-width: 600px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
     }
-  }
-</style>
+
+    .rozcesnik {
+      width: 100%;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      padding: 40px 30px;
+      text-align: center;
+    }
+
+    .rozcesnik h2 {
+      margin-bottom: 30px;
+      font-size: 1.8rem;
+      color: #333;
+    }
+
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .buttons a {
+      display: inline-block;
+      text-decoration: none;
+      background: #007BFF;
+      color: white;
+      padding: 15px 0;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: background 0.3s ease;
+      font-size: 1.1rem;
+    }
+
+    .buttons a:hover {
+      background: #0056b3;
+    }
+
+    @media (min-width: 480px) {
+      .buttons {
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      .buttons a {
+        flex: 1;
+        margin: 0 10px;
+      }
+    }
+  </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Kam chceš jít dál?</h1>
-    <nav>
-      <a href="#sekce1">Sekce 1</a>
-      <a href="#sekce2">Sekce 2</a>
-      <a href="#sekce3">Sekce 3</a>
-    </nav>
-  </div>
+
+  <header>
+    Vítejte na naší stránce!
+  </header>
+
+  <main>
+    <div class="rozcesnik">
+      <h2>Kam chceš jít dál?</h2>
+      <div class="buttons">
+        <a href="#sekce1">Sekce 1</a>
+        <a href="#sekce2">Sekce 2</a>
+        <a href="#sekce3">Sekce 3</a>
+      </div>
+    </div>
+  </main>
+
 </body>
 </html>
