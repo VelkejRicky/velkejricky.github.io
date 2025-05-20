@@ -5,61 +5,70 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Landing Page</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
   * {
-    margin: 0; padding: 0; box-sizing: border-box;
+    margin:0; padding:0; box-sizing: border-box;
   }
   body, html {
     height: 100%;
-    font-family: 'Inter', sans-serif;
-    background: #f5f7fa;
-    color: #333;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
   }
   .container {
-    background: #fff;
-    max-width: 480px;
+    background: rgba(255 255 255 / 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.37);
+    max-width: 600px;
     width: 100%;
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    padding: 40px 30px;
+    padding: 50px 40px;
     text-align: center;
   }
   h1 {
     font-weight: 600;
-    font-size: 2rem;
-    margin-bottom: 30px;
-    color: #222;
+    font-size: 2.8rem;
+    margin-bottom: 40px;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.3);
   }
   nav {
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 25px;
   }
   nav a {
     text-decoration: none;
-    background-color: #4a90e2;
-    color: #fff;
-    padding: 14px 0;
-    border-radius: 8px;
     font-weight: 600;
-    font-size: 1.1rem;
-    transition: background-color 0.3s ease;
+    font-size: 1.3rem;
+    padding: 18px 0;
+    border-radius: 12px;
+    background: linear-gradient(90deg, #ff6a00, #ee0979);
+    box-shadow: 0 5px 15px rgba(238,9,121,0.6);
+    color: #fff;
+    transition: background 0.4s ease, transform 0.3s ease;
+    user-select: none;
   }
   nav a:hover {
-    background-color: #357ABD;
+    background: linear-gradient(90deg, #ee0979, #ff6a00);
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(255, 106, 0, 0.85);
   }
-  @media (min-width: 480px) {
+  nav a:active {
+    transform: scale(0.95);
+    box-shadow: 0 3px 10px rgba(238,9,121,0.4);
+  }
+  @media (min-width: 600px) {
     nav {
       flex-direction: row;
       justify-content: center;
     }
     nav a {
       flex: 1;
-      margin: 0 10px;
+      margin: 0 12px;
     }
   }
 </style>
