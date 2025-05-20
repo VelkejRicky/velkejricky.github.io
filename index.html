@@ -3,164 +3,75 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>ULTIMÁTNÍ LANDING PAGE</title>
+<title>Landing Page</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
-  *{margin:0;padding:0;box-sizing:border-box;}
-  body,html{
-    height:100%;
-    font-family:'Poppins',sans-serif;
-    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
-    color:#fff;
-    overflow-x:hidden;
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+  * {
+    margin: 0; padding: 0; box-sizing: border-box;
   }
-  body::before{
-    content:"";
-    position:fixed;top:0;left:0;right:0;bottom:0;
-    background:
-      radial-gradient(2px 2px at 20% 15%,#fff8 90%,transparent 100%),
-      radial-gradient(1.5px 1.5px at 80% 30%,#fff6 80%,transparent 100%),
-      radial-gradient(2.5px 2.5px at 50% 70%,#fff7 85%,transparent 100%);
-    background-repeat:repeat;
-    background-size:100% 100%;
-    animation: starTwinkle 12s ease-in-out infinite;
-    pointer-events:none;
-    z-index:0;
+  body, html {
+    height: 100%;
+    font-family: 'Inter', sans-serif;
+    background: #f5f7fa;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
   }
-  @keyframes starTwinkle {
-    0%,100%{background-position:0% 0%,0% 0%,0% 0%;opacity:1;}
-    50%{background-position:100% 50%,50% 100%,100% 100%;opacity:0.7;}
+  .container {
+    background: #fff;
+    max-width: 480px;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    padding: 40px 30px;
+    text-align: center;
   }
-  header{
-    position:fixed;top:0;left:0;right:0;
-    background:rgba(0,0,0,0.6);
-    padding:30px 0;
-    text-align:center;
-    font-size:2.2rem;
-    font-weight:700;
-    letter-spacing:.12em;
-    text-transform:uppercase;
-    color:#ff4081;
-    text-shadow:0 0 8px #ff4081,0 0 20px #ff4081;
-    z-index:100;
-    user-select:none;
+  h1 {
+    font-weight: 600;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #222;
   }
-  main{
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    padding-top:100px;
-    z-index:10;
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
   }
-  .rozcesnik{
-    position:relative;
-    background:linear-gradient(135deg,#ff4e50,#f9d423);
-    width:100%;
-    max-width:650px;
-    border-radius:35px;
-    padding:60px 50px;
-    box-shadow:0 25px 60px rgba(255,78,80,.6),0 0 25px rgba(249,212,35,.7);
-    text-align:center;
-    color:#1b0a00;
-    font-weight:800;
-    letter-spacing:.04em;
-    overflow:hidden;
-    user-select:none;
-    cursor:default;
+  nav a {
+    text-decoration: none;
+    background-color: #4a90e2;
+    color: #fff;
+    padding: 14px 0;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
   }
-  .rozcesnik::before{
-    content:"";
-    position:absolute;
-    top:-30%;left:-30%;
-    width:160%;height:160%;
-    background:radial-gradient(circle,rgba(255,255,255,.4),transparent 60%);
-    filter:blur(80px);
-    animation:pulseGlow 4.5s ease-in-out infinite alternate;
-    pointer-events:none;
-    border-radius:50%;
-    z-index:0;
+  nav a:hover {
+    background-color: #357ABD;
   }
-  @keyframes pulseGlow {
-    0%{transform:scale(1);opacity:.6;}
-    100%{transform:scale(1.2);opacity:.1;}
-  }
-  .rozcesnik h2{
-    position:relative;
-    z-index:10;
-    font-size:3rem;
-    margin-bottom:50px;
-    text-shadow:0 0 15px #fff5,0 0 25px #ff4e50aa;
-  }
-  .buttons{
-    display:flex;
-    flex-direction:column;
-    gap:28px;
-    position:relative;
-    z-index:10;
-  }
-  .buttons a{
-    background:linear-gradient(45deg,#ff416c,#ff4b2b);
-    border-radius:15px;
-    padding:22px 0;
-    color:#fff;
-    font-weight:900;
-    font-size:1.35rem;
-    text-transform:uppercase;
-    letter-spacing:.15em;
-    text-decoration:none;
-    box-shadow:0 0 8px #ff416c,0 0 20px #ff4b2b,0 0 30px #ff416c,inset 0 0 10px #ff4b2b;
-    transition:box-shadow .35s ease,transform .3s ease;
-    position:relative;
-    overflow:hidden;
-  }
-  .buttons a::after{
-    content:"";
-    position:absolute;
-    top:0;left:-50%;
-    width:50%;
-    height:100%;
-    background:linear-gradient(120deg,transparent,rgba(255,255,255,.7),transparent);
-    transform:skewX(-25deg);
-    animation:shineMove 3s infinite;
-  }
-  @keyframes shineMove {
-    0%{left:-50%;opacity:0;}
-    50%{left:120%;opacity:1;}
-    100%{left:120%;opacity:0;}
-  }
-  .buttons a:hover{
-    box-shadow:0 0 20px #ff416c,0 0 40px #ff4b2b,0 0 50px #ff416c,inset 0 0 20px #ff4b2b;
-    transform:scale(1.07);
-    cursor:pointer;
-  }
-  .buttons a:active{
-    transform:scale(0.98);
-    box-shadow:0 0 10px #ff4b2b,inset 0 0 10px #ff416c;
-  }
-  @media(min-width:640px){
-    .buttons{
-      flex-direction:row;
-      justify-content:center;
+  @media (min-width: 480px) {
+    nav {
+      flex-direction: row;
+      justify-content: center;
     }
-    .buttons a{
-      flex:1;
-      margin:0 15px;
+    nav a {
+      flex: 1;
+      margin: 0 10px;
     }
   }
 </style>
 </head>
 <body>
-<header>VÍTĚZOVÉ VŠECH STRAN, SPOJTE SE!</header>
-<main>
-  <div class="rozcesnik" role="navigation" aria-label="Hlavní rozcestník">
-    <h2>Kam chceš jít dál?</h2>
-    <div class="buttons">
+  <div class="container">
+    <h1>Kam chceš jít dál?</h1>
+    <nav>
       <a href="#sekce1">Sekce 1</a>
       <a href="#sekce2">Sekce 2</a>
       <a href="#sekce3">Sekce 3</a>
-    </div>
+    </nav>
   </div>
-</main>
 </body>
 </html>
