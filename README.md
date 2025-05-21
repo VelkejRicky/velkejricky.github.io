@@ -1,1 +1,0 @@
-# velkejricky.github.io
