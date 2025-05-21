@@ -31,11 +31,10 @@ section {
     background-color: var(--color2);
     color: var(--color3);
     align-items: center;
-    padding: 10px 3%;
     text-transform: uppercase;
     z-index: 999;
     transition: background-color 0.3s ease;
-    padding: 10px;
+    padding: 10px ;
 }
 
 nav ul {
@@ -43,6 +42,7 @@ nav ul {
     display: flex;
     margin: 0;
     align-items: center;
+    padding-right: 30px;
 }
 
 nav a {
@@ -73,6 +73,7 @@ nav a:hover {
 #welcome-section img {
     width: 30vw;
     border-radius: 100%;
+    animation: fadeInUp 1.5s ease forwards;
 }
 
 #welcome-section h1 {
@@ -100,6 +101,7 @@ nav a:hover {
         opacity: 0;
         transform: translateY(-30px);
     }
+
     100% {
         opacity: 1;
         transform: translateY(0);
@@ -111,6 +113,7 @@ nav a:hover {
         opacity: 0;
         transform: translateY(30px);
     }
+
     100% {
         opacity: 1;
         transform: translateY(0);
@@ -244,92 +247,74 @@ i:hover {
 
 
 @media (max-width: 768px) {
-  #navbar {
+    #navbar {
 
-    justify-content: center;
-    padding: 10px;
-  }
+        justify-content: center;
+        padding: 10px;
+    }
 
-  nav ul {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 
+    #welcome-section {
+        flex-direction: column;
+        padding:  30px;
+        text-align: center;
+    }
 
+    #welcome-section img {
+        width: 80vw;
+    }
 
-  #welcome-section {
-    flex-direction: column;
-    padding: 30px ;
-    text-align: center;
-  }
+    #welcome-section h1 {
+        font-size: 4.5em;
+    }
 
-  #welcome-section img {
- width: 60vw;
-  }
+    #welcome-section h2 {
+        font-size: 3.5em;
+    }
 
-  #welcome-section h1 {
-    font-size: 4em;
-  }
+    
 
-  #welcome-section h2 {
-    font-size: 3em;
-  }
+    .project-tile {
+        width: 90%;
+    }
 
-  .projects-grid {
-    flex-direction: column;
-    align-items: center;
-  }
+    .copyright {
+        flex-direction: column;
 
-  .project-tile {
-    width: 90%;
-  }
-
-
- 
-
-
-
-  .copyright {
-    flex-direction: column;
-
-    text-align: center;
-  }
+        text-align: center;
+    }
 }
 
 
 @media (max-width: 480px) {
- #navbar {
-    
-    flex-direction: column;
-  justify-content: center;
-padding:10px 0;
+    #navbar {
 
-  }
+        flex-direction: column;
+        justify-content: center;
+        padding: 10px 0;
 
-  nav ul {
-    flex-direction: column;
-    width: 100%;
-      padding: 0;
-      gap: 5px;
-  }
-   #welcome-section {
+    }
 
-    padding-top: 60px ;
- 
-  }
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        gap: 5px;
+    }
 
- #welcome-section img {
- width: 80vw;
-  }
+    #welcome-section {
 
+        padding-top: 60px;
 
+    }
 
- 
-
-
-
-
-
+    #welcome-section img {
+        width: 80vw;
+    }
 
 
 
