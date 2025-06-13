@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>404 - Stránka nenalezena</title>
+  <style>
+    html {
+      --color3: #FFFBDE;
+      --color4: #096B68;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+   
+    }
+
+    body {
+      color: var(--color4);
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+  
+    video{
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -2;
+      filter: brightness(0.9) blur(1px);
+    }
+
+   
+    body::after {
+      content: "";
+      position: absolute;
+      
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.3);
+      z-index: -1;
+    }
+
+    .container {
+      padding: 30px 20px;
+      background-color: rgba(255, 251, 222, 0.5);
+      border-radius: 16px;
+      width: 50%;
+      animation: fadeIn 1s ease forwards;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+      transition: 0.3s ease;
+    }
+
+    
+
+    h1 {
+      font-size: 12rem;
+      margin-bottom: 20px;
+      color: var(--color4);
+      animation: float 3s ease-in-out infinite;
+    }
+
+    p {
+      font-size: 1.7rem;
+      margin-bottom: 30px;
+      color: var(--color4);
+      font-weight: 600;
+    }
+
+    a {
+    
+      padding: 12px 24px;
+      background-color: var(--color4);
+      color: var(--color3);
+      text-decoration: none;
+      border-radius: 8px;
+      transition: 0.3s ease-in-out;
+    }
+
+    a:hover {
+      background-color: var(--color3);
+      color: var(--color4);
+      transform: scale(1.05);
+    }
+
+    .small-text {
+      margin-top: 20px;
+      font-size: 1.3rem;
+      color: var(--color4);
+      opacity: 0.8;
+      font-weight: 800;
+    }
+
+
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: scale(0.95); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+  
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 6rem;
+      }
+
+      .container {
+        width: 80%;
+        padding: 20px;
+      }
+
+      p {
+        font-size: 1.3rem;
+      }
+
+      .small-text {
+        font-size: 1rem;
+      }
+    }
+
+  </style>
+</head>
+<body>
+ 
+  <video  autoplay muted loop >
+    <source src="nene.mp4" type="video/mp4">
+    Tvůj prohlížeč nepodporuje přehrávání videa.
+  </video>
+
+  <div class="container">
+    <h1>404</h1>
+    <p>Máš smůlu bwhahahah, sem určitě ne</p>
+    <a href="https://velkejricky.github.io/portfolio.html">Vrať se zpět</a>
+    <div class="small-text">Padej už pryč >:(</div>
+  </div>
+</body>
+</html>
